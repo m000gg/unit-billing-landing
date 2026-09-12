@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Billing — Universal Billing Infrastructure</title>
+    <meta name="description" content="Unit Billing is an open-source, modular monolith billing platform for any subscription-based business. Secure, multicurrency, and developer-ready." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        base: '#050508',
+                        surface: '#0B0B14',
+                        violet: '#7C5CFF',
+                        cyan: '#38BDF8',
+                        emerald: '#34D399',
+                        ink: '#F5F5FA',
+                        muted: '#8B93A7',
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-base text-ink font-body antialiased selection:bg-violet/30 selection:text-white">
+
+<div class="ledger-grid" aria-hidden="true"></div>
+
+<header class="fixed top-0 inset-x-0 z-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="mt-4 flex items-center justify-between rounded-2xl nav-glass px-5 py-3">
+            <a href="#" class="flex items-center group">
+                <span class="font-display font-semibold text-[15px] tracking-tight">Unit Billing</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How it Works</a>
+                <a href="#stack" class="nav-link">Stack</a>
+            </nav>
+
+            <a href="https://github.com/m000gg/unit-billing" target="_blank" rel="noopener"
+               class="flex items-center gap-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 px-3.5 py-2 text-sm font-medium transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">GitHub</span>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-amber-300 fill-amber-300"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="relative pt-44 pb-28 px-6 overflow-hidden">
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="relative max-w-4xl mx-auto text-center">
+        <div class="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs text-muted mb-8">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald animate-pulse"></span>
+            Open source · Apache 2.0
+        </div>
+
+        <h1 class="reveal font-display font-semibold text-[2.75rem] leading-[1.08] sm:text-6xl sm:leading-[1.06] tracking-tight text-white">
+            Universal Billing<br class="hidden sm:block"/>
+            <span class="grad-text">Infrastructure.</span>
+        </h1>
+
+        <p class="reveal mt-6 max-w-xl mx-auto text-base sm:text-lg text-muted leading-relaxed">
+            The open-source, modular monolith billing platform built to scale with any business.
+            Secure, multicurrency, and developer-ready.
+        </p>
+
+        <div class="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://github.com/m000gg/unit-billing" target="_blank" rel="noopener" class="btn-github flex items-center justify-center gap-2 w-full sm:w-auto">
+                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                <span>View on GitHub</span>
+            </a>
+            <a href="https://github.com/m000gg/unit-billing/tree/main/docs" target="_blank" rel="noopener" class="btn-secondary flex items-center justify-center gap-2 w-full sm:w-auto">
+                Read the Docs
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="relative px-6 pb-32">
+    <div class="max-w-5xl mx-auto">
+
+        <div class="reveal flex justify-center mb-8">
+            <div class="inline-flex items-center rounded-full border border-white/10 bg-white/[0.03] p-1 text-sm">
+                <button type="button" data-view="admin" class="toggle-btn is-active" aria-pressed="true">Admin dashboard</button>
+                <button type="button" data-view="client" class="toggle-btn" aria-pressed="false">Client portal</button>
+            </div>
+        </div>
+
+        <div class="reveal showcase-frame">
+            <div class="showcase-chrome">
+                <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#FEBC2E]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#28C840]"></span>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <span id="showcase-url" class="chrome-url">unit-billing.local/admin</span>
+                </div>
+                <div class="w-14"></div>
+            </div>
+
+            <div class="showcase-body group" id="showcase-body">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-track"></div>
+                </div>
+
+                <button type="button" id="carousel-prev" class="carousel-arrow carousel-arrow-left" aria-label="Previous slide">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <button type="button" id="carousel-next" class="carousel-arrow carousel-arrow-right" aria-label="Next slide">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="how-it-works" class="relative px-6 py-28 border-t border-white/[0.06]">
+    <div class="max-w-4xl mx-auto">
+        <div class="reveal mb-16">
+            <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight text-white">From clone to first invoice.</h2>
+            <p class="mt-3 text-muted max-w-lg">Four steps stand between a fresh checkout and a running billing system.</p>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-rail" aria-hidden="true"></div>
+
+            <div class="reveal timeline-step">
+                <div class="timeline-marker">01</div>
+                <div class="timeline-content">
+                    <h3 class="font-display font-semibold text-lg text-white">Deploy</h3>
+                    <p class="mt-1.5 text-sm text-muted leading-relaxed">Clone the repository and run it directly with Maven — no containers required to get started.</p>
+                    <pre class="mini-code mt-4"><code>mvn spring-boot:run</code></pre>
+                </div>
+            </div>
+
+            <div class="reveal timeline-step">
+                <div class="timeline-marker">02</div>
+                <div class="timeline-content">
+                    <h3 class="font-display font-semibold text-lg text-white">Configure your app</h3>
+                    <p class="mt-1.5 text-sm text-muted leading-relaxed">Set up your database connection and adjust core platform properties to fit your business logic.</p>
+                </div>
+            </div>
+
+            <div class="reveal timeline-step">
+                <div class="timeline-marker">03</div>
+                <div class="timeline-content">
+                    <h3 class="font-display font-semibold text-lg text-white">Manage subscribers</h3>
+                    <p class="mt-1.5 text-sm text-muted leading-relaxed">Register new users, delete or update profiles, suspend accounts, issue custom invoices, and manually adjust balances from a single dashboard.</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="reveal timeline-step">
+                <div class="timeline-marker">04</div>
+                <div class="timeline-content">
+                    <h3 class="font-display font-semibold text-lg text-white">Bill &amp; invoice</h3>
+                    <p class="mt-1.5 text-sm text-muted leading-relaxed">Every charge lands in an immutable transaction ledger, converted across currencies with a full audit trail.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="relative px-6 py-28 border-t border-white/[0.06]">
+    <div class="max-w-5xl mx-auto">
+        <div class="reveal mb-14">
+            <h2 class="font-display font-semibold text-3xl sm:text-4xl tracking-tight text-white">What's in the ledger.</h2>
+            <p class="mt-3 text-muted max-w-lg">Everything a subscription business needs on day one — nothing it has to bolt on later.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <div class="reveal feature-card md:col-span-2">
+                <div class="feature-icon"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                <h3 class="font-display font-semibold text-lg text-white mt-5">Role-based security</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed max-w-sm">Session-based authentication with granular role separation between admin and client surfaces — no shared attack surface.</p>
+            </div>
+
+            <div class="reveal feature-card">
+                <div class="feature-icon"><i data-lucide="users" class="w-5 h-5"></i></div>
+                <h3 class="font-display font-semibold text-lg text-white mt-5">Full user lifecycle</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed">Complete CRUD across the subscriber lifecycle, from signup to churn.</p>
+            </div>
+
+            <div class="reveal feature-card">
+                <div class="feature-icon"><i data-lucide="globe" class="w-5 h-5"></i></div>
+                <h3 class="font-display font-semibold text-lg text-white mt-5">Multicurrency &amp; i18n</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed">ISO 4217 currency handling with bidirectional exchange-rate entry against a fixed base currency.</p>
+            </div>
+
+            <div class="reveal feature-card md:col-span-2">
+                <div class="feature-icon"><i data-lucide="scroll-text" class="w-5 h-5"></i></div>
+                <h3 class="font-display font-semibold text-lg text-white mt-5">Complete transaction audit</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed max-w-sm">Every ledger entry is immutable and traceable — base amount, subscriber amount, and the exact rate applied.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="stack" class="relative px-6 py-28 border-t border-white/[0.06]">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="reveal font-display font-semibold text-3xl sm:text-4xl tracking-tight text-white">Built on a production-ready foundation.</h2>
+        <p class="reveal mt-3 text-muted max-w-md mx-auto">No exotic dependencies. Just the tools already trusted to run critical infrastructure.</p>
+
+        <div class="reveal mt-14 grid grid-cols-2 sm:grid-cols-5 gap-4">
+            <div class="stack-pill"><span class="stack-dot bg-[#F58219]"></span>Java</div>
+            <div class="stack-pill"><span class="stack-dot bg-[#6DB33F]"></span>Spring Boot</div>
+            <div class="stack-pill"><span class="stack-dot bg-[#336791]"></span>PostgreSQL</div>
+            <div class="stack-pill"><span class="stack-dot bg-[#2496ED]"></span>Docker</div>
+            <div class="stack-pill"><span class="stack-dot bg-[#CC0200]"></span>Flyway</div>
+        </div>
+    </div>
+</section>
+
+<section class="relative px-6 py-28 border-t border-white/[0.06]">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="reveal font-display font-semibold text-3xl sm:text-4xl tracking-tight text-white">Running in under a minute.</h2>
+        <p class="reveal mt-3 text-muted">Three commands. No config wizard.</p>
+
+        <div class="reveal terminal mt-10 text-left">
+            <div class="terminal-chrome">
+                <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#FEBC2E]"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#28C840]"></span>
+                </div>
+                <span class="text-xs text-muted/70 font-mono">zsh</span>
+                <button id="copy-btn" type="button" class="copy-btn">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    <span id="copy-label">Copy</span>
+                </button>
+            </div>
+            <pre class="terminal-body font-mono text-sm leading-[1.9]" id="terminal-code"><code><span class="t-muted">$</span> git clone https://github.com/m000gg/unit-billing.git
+<span class="t-muted">$</span> cd unit-billing
+<span class="t-muted">$</span> mvn spring-boot:run
+<span class="t-emerald">✓ unit-billing running on :8080</span></code></pre>
+        </div>
+    </div>
+</section>
+
+<footer class="relative px-6 py-12 border-t border-white/[0.06]">
+    <div class="max-w-5xl mx-auto text-center">
+        <p class="text-sm text-muted">
+            Licensed under Apache License 2.0. Built by
+            <a href="https://github.com/m000gg" target="_blank" rel="noopener" class="text-white/80 hover:text-white transition-colors">Vladyslav Livandovskyi</a>.
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
