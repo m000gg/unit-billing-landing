@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
         },
         client: {
-            url: 'unit-billing.local/portal',
+            url: 'unit-billing.local/client',
             images: [
                 './screenshots/client-1.png',
                 './screenshots/client-2.png',
